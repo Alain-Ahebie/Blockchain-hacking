@@ -1,0 +1,12 @@
+# Environments
+web3
+.vscode
+export.txt
+Signature*
+Untitle*
+output.txt
+.ipynb
+#Libs
+package*
+node_modules
+.git

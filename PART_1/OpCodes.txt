@@ -1,0 +1,12 @@
+6060 6040 52
+push1(60)
+push1(40)
+MSTORE(40, 60) ==> store 60 at the offset of 40 in memory
+
+
+36 15 61 00b7 57
+
+CALLDATASIZE <-- msg.data
+ISZERO <-- msg.data True or False 
+PUSH2(00b7)
+JUMPI(00b7, ISZERO)
