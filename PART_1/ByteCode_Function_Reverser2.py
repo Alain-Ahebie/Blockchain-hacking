@@ -33,3 +33,4 @@ for signature in signature_from_asm:
             print(f'{Fore.RED}Signature Not Found {signature} returned {r.status_code}')
 
 print(Fore.WHITE)       
+# print(Fore.WHITE)  
