@@ -6,9 +6,9 @@ web3 = Web3(Web3.HTTPProvider(GANACHE))
 print(f'Connected: {web3.is_connected()}')
 
 #accounts for transactions
-first_account = "0x9665b12B2A6634E856766f5b675a87891ed08EA9"
-first_account_priv = "0xf5bc48486dff252df456a2e2a897f6ae5440d0bf9453493410864062274d7770"
-second_account = "0x52cAcd9BE516376c335d5453a9eB381D735e6168"
+first_account = "0xfF26933Ee7F623BF74810D211263f22964f53586"
+first_account_priv = "0x2164941972dd17afc794781aec4547a37bd37e6f55dfd3b74c11e2c000b84347"
+second_account = "0x58AD4f8F3C8c4AbC84b69fCaf7683CD0f07b7E4b"
 
 
 #build a transaction
@@ -24,5 +24,5 @@ transaction = {
 signed_transacion = web3.eth.account.sign_transaction(transaction, first_account_priv)
 transaction_hash = web3.eth.send_raw_transaction(signed_transacion.rawTransaction)
 
-print(Web3.to_hex(transaction_hash))
+print("HASH",Web3.to_hex(transaction_hash))
 print(web3.eth.get_transaction(transaction_hash))
