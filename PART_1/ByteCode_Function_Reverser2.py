@@ -36,4 +36,3 @@ for instruction in disass:
 # print(Fore.WHITE)       
 # # print(Fore.WHITE)  
 
-PUSH4 0xd73dd623
