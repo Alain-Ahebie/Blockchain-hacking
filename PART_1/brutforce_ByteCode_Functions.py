@@ -11,7 +11,7 @@ for signature in open(signatures, 'r'):
     signature = str(signature.strip())
     
     if signature in bytecode:
-        r = requests.get(f"https://api.etherface.io/v1/signatures/hash/all/{signature}/1")
+        r = requests.get(f"https://api.etherface.io/v1/signatures/hash/all/{signature}/1", verify = False)
         matches = re.findall(r'(?<="text":")(.*?)(?=",)',r.text)
         
         if r.status_code == 200 and matches:

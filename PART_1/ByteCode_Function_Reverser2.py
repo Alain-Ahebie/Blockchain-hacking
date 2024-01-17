@@ -19,10 +19,10 @@ for instruction in disass:
         signature_from_asm.append(instruction[-8:])
 
 
-# for signature in signature_from_asm:
-#     if signature in signatures:
-#         r = requests.get(f"https://api.etherface.io/v1/signatures/hash/all/{signature}/1")
-#         matches = re.findall(r'(?<="text":")(.*?)(?=",)',r.text)
+for signature in signature_from_asm:
+    if signature in signatures:
+        r = requests.get(f"https://api.etherface.io/v1/signatures/hash/all/{signature}/1")
+        matches = re.findall(r'(?<="text":")(.*?)(?=",)',r.text)
         
 #         if r.status_code == 200 and matches:
 #             print(f'{Fore.GREEN}Signature found:')
@@ -34,5 +34,3 @@ for instruction in disass:
 #             print(f'{Fore.RED}Signature Not Found {signature} returned {r.status_code}')
 
 # print(Fore.WHITE)       
-# # print(Fore.WHITE)  
-
